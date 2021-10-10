@@ -1,0 +1,294 @@
+.basket,
+.basket-module,
+.basket-labels,
+.item,
+.price,
+.quantity,
+.subtotal,
+.basket-product,
+.product-image,
+.product-details {
+    float: left;
+}
+
+.item {
+    width: 55%;
+
+    @media screen and(max-width:640px) {
+        width: 100%;
+        margin-bottom: pxrem(16px);
+    }
+}
+
+.price,
+.quantity,
+.subtotal {
+    width: 15%;
+
+}
+
+.quantity {
+
+    .btn-input {
+        background-color: inherit;
+        outline: none;
+        border: none;
+        width: 48px;
+        vertical-align: middle;
+
+        transition: .3s;
+
+        &:hover {
+            opacity: .6;
+        }
+
+        i {
+            font-size: pxrem(24px);
+
+        }
+
+    }
+}
+
+.price {
+    @media screen and(max-width:640px) {
+        width: 34%;
+    }
+}
+
+.subtotal,
+.quantity {
+    @media screen and (max-width:640px) {
+        text-align: center;
+        width: 33%;
+    }
+
+}
+
+.subtotal {
+    text-align: right;
+}
+
+main {
+    clear: both;
+    font-size: pxrem(14px);
+    margin: pxrem(100px) auto;
+    overflow: hidden;
+    padding: 1rem 0;
+    width: 68.875rem;
+
+    @media screen and(max-width:1048px) {
+        width: 100%;
+    }
+
+    .basket {
+        width: 67%;
+
+        @media screen and (max-width:640px) {
+            width: 100%;
+        }
+
+        .basket-labels {
+            width: 100%;
+            border-top: 1px solid $thin;
+            border-bottom: 1px solid $thin;
+            margin-top: pxrem(17px);
+
+            .item-heading {
+                padding-left: pxrem(64px);
+            }
+
+            @media screen and (max-width:640px) {
+                display: none;
+            }
+        }
+
+        .basket-product {
+            width: 100%;
+            border-bottom: 1px solid $thin;
+            position: relative;
+            padding: pxrem(16px);
+
+            .product-image {
+                width: 35%;
+
+                @media screen and(max-width:640px) {
+                    width: 40%;
+                }
+
+                img {
+                    width: 80%;
+                }
+            }
+
+            .quantity-field {
+                border: 1px solid $thin;
+                border-radius: pxrem(99px);
+                width: pxrem(48px);
+                outline: none;
+                text-align: center;
+            }
+
+            .remove {
+                bottom: pxrem(17px);
+                float: right;
+                position: absolute;
+                text-align: right;
+                right: 0;
+                width: 45%;
+
+                transition: .3s;
+
+                &:hover {
+                    opacity: .6;
+                }
+
+
+                @media screen and(max-width:640px) {
+                    width: 100%;
+                    bottom: 0;
+                    text-align: left;
+                    position: relative;
+
+                    a {
+                        padding: 0;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+aside {
+    float: right;
+    position: relative;
+    width: 33%;
+    padding-left: pxrem(14px);
+
+    @media screen and(max-width:640px) {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    @media screen and(min-width:641px) and (max-width:1048px) {
+        padding: 0 pxrem(16px) 0 0;
+    }
+
+    .summary {
+        background-color: #eee;
+        border: 1px solid $thin;
+        padding: 1rem;
+        background-position: fixed;
+        width: 18.625rem;
+
+        @media screen and(max-width:640px) {
+            width: 100%;
+            margin-top: pxrem(17px);
+            position: relative;
+        }
+
+        @media screen and (min-width: 641px) and (max-width: 1048px) {
+            .summary {
+                width: 28%;
+            }
+        }
+
+        .summary-total-items {
+            color: #666;
+            font-size: 0.875rem;
+            text-align: center;
+
+        }
+
+        .summary-subtotal,
+        .summary-total,
+        .summary-email {
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            clear: both;
+            margin: 1rem 0;
+            overflow: hidden;
+            padding: 0.5rem 0;
+        }
+
+        .total-title,
+        .subtotal-value,
+        .total-title,
+        .total-value {
+            color: #111;
+            float: left;
+            width: 50%;
+        }
+
+        .email-title {
+            margin-bottom: pxrem(10px);
+        }
+
+        .input-email {
+            padding: pxrem(5px);
+            outline: none;
+            outline: none;
+            border: 1px solid $thin;
+        }
+
+        .button-email {
+            padding: pxrem(5px);
+            outline: none;
+            text-align: center;
+            vertical-align: middle;
+            background-color: $white;
+            transition: .3s;
+            outline: none;
+            border: 1px solid $thin;
+
+            &:hover {
+                background-color: rgb(223, 223, 223);
+            }
+        }
+
+        .email-added {
+            border: 1px solid $thin;
+            border-radius: pxrem(999px);
+            width: max-content;
+            background-color: $white;
+            padding: 5px;
+
+            i {
+                margin-top: auto;
+                margin-left: pxrem(5px);
+            }
+        }
+
+        .summary-checkout,
+        .summary-email {
+            display: block;
+        }
+
+        .checkout-cta {
+            display: block;
+            float: none;
+            font-size: 0.75rem;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 0.625rem 0;
+            width: 100%;
+
+        }
+
+        .summary-checkout {
+            a {
+                background-color: $white;
+                border: 1px solid #CCC;
+                display: block;
+                text-align: center;
+                padding: pxrem(5px);
+                transition: .3s;
+
+                &:hover {
+                    background-color: rgb(223, 223, 223);
+                }
+            }
+        }
+    }
+}

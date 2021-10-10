@@ -1,0 +1,128 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: pxrem(20px);
+    position: absolute;
+
+    .icon {
+        font-size: pxrem(32px);
+    }
+
+    .logo {
+        width: pxrem(70px);
+        height: 20%;
+    }
+}
+
+.forms {
+    position: absolute;
+    top: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    form {
+
+
+        h2 {
+            margin-top: pxrem(15px);
+            font-size: pxrem(20px);
+            margin-bottom: pxrem(10px);
+        }
+
+        p {
+            font-size: pxrem(13px);
+            margin-bottom: pxrem(10px);
+
+            a {
+                color: lightblue;
+            }
+        }
+
+        .inputs {
+            margin-bottom: pxrem(10px);
+
+            .txt-input {
+                width: 70%;
+                border: none;
+                border-bottom: 1px solid black;
+                padding: 0 0 pxrem(10px) pxrem(5px);
+                outline: none;
+
+            }
+
+            .btn-input {
+                margin-top: pxrem(15px);
+                padding: pxrem(14px);
+                text-overflow: ellipsis;
+                border-radius: pxrem(999px);
+                border: none;
+                text-align: center;
+                color: $white;
+                background-color: $green;
+
+                &:hover {
+                    opacity: .6;
+                }
+            }
+
+            label {
+                font-size: pxrem(12px);
+            }
+
+
+        }
+
+        #required {
+            font-size: pxrem(10px);
+            color: brown;
+            font-style: oblique;
+        }
+    }
+
+    @media screen and (min-width: 900px) {
+        .header {
+            .icon {
+                font-size: pxrem(42px);
+            }
+        }
+
+        form {
+            h2 {
+                //margin-top: pxrem(30px);
+                font-size: pxrem(70px);
+                margin-bottom: pxrem(25px);
+            }
+
+            p {
+                font-size: pxrem(20px);
+                margin-bottom: pxrem(20px);
+
+
+            }
+
+            .inputs {
+                margin-top: pxrem(20px);
+                height: max-content;
+
+                input {
+                    font-size: pxrem(20px);
+
+                    &::placeholder {
+                        font-size: pxrem(20px);
+                    }
+                }
+
+                label {
+                    font-size: pxrem(20px);
+                }
+            }
+
+
+
+        }
+    }
+}

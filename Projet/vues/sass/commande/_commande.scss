@@ -1,0 +1,112 @@
+.com-container {
+    width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+    justify-content: center;
+
+    @media screen and(min-width:700px) {
+        background-color: whitesmoke;
+    }
+
+
+    .com-contain {
+        display: block;
+        background-color: $white;
+        //border: 0.5px solid rgba($brn, .6);
+        max-width: 90%;
+        height: max-content;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: pxrem(150px);
+        padding: pxrem(20px);
+
+        @media screen and (max-width:700px) {
+            max-width: 100%;
+        }
+
+        .title-section {
+            margin-bottom: pxrem(30px);
+
+
+            .subtitle {
+                margin-top: pxrem(20px);
+                text-transform: uppercase;
+                font-size: pxrem(18px);
+                font-weight: bold;
+                margin-bottom: pxrem(20px);
+            }
+
+
+        }
+
+        .result-container {
+            border-top: 1px solid $thin;
+
+            .input-section {
+                margin-top: pxrem(14px);
+
+                .area {
+                    border: 1px solid $thin;
+                    padding: pxrem(5px);
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: pxrem(15px);
+
+
+                    .stock-lbl {
+                        font-size: pxrem(10px);
+                        text-transform: uppercase;
+
+                    }
+
+                    #achat {
+                        font-size: pxrem(20px);
+                        background-color: inherit;
+                        width: 100%;
+                        border: none;
+                        outline: none;
+
+                    }
+                }
+            }
+
+            .achat-container {
+                width: 100%;
+                border-collapse: collapse;
+
+                th {
+                    padding: pxrem(5px);
+                    text-align: left;
+                    text-transform: uppercase;
+
+                    @media screen and (max-width:800px) {
+                        font-size: pxrem(10px);
+                    }
+
+                }
+
+                .price::after {
+                    content: " €";
+                }
+
+                td {
+                    padding: pxrem(5px);
+                    text-align: left;
+                    width: pxrem(79px);
+                    vertical-align: top;
+
+                    @media screen and (max-width:800px) {
+                        font-size: pxrem(13px);
+                    }
+
+                    a {
+                        i {
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

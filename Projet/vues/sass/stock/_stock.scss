@@ -1,0 +1,177 @@
+img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+
+}
+
+
+.stock-container {
+    width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+    justify-content: center;
+
+    @media screen and(min-width:700px) {
+        background-color: whitesmoke;
+    }
+
+    .stock-contain {
+        display: block;
+        background-color: $white;
+        //border: 0.5px solid rgba($brn, .6);
+        max-width: 90%;
+        height: max-content;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: pxrem(150px);
+        padding: pxrem(20px);
+
+    }
+
+    .title-section {
+        margin-bottom: pxrem(30px);
+
+
+        .subtitle {
+            margin-top: pxrem(20px);
+            text-transform: uppercase;
+            font-size: pxrem(18px);
+            font-weight: bold;
+            margin-bottom: pxrem(20px);
+        }
+    }
+
+    .input-section {
+        margin-top: pxrem(14px);
+
+        .area {
+            border: 1px solid $brn;
+            padding: pxrem(5px);
+            display: flex;
+            flex-direction: column;
+            margin-bottom: pxrem(15px);
+
+
+            .stock-lbl {
+                font-size: pxrem(10px);
+                text-transform: uppercase;
+
+            }
+
+            .img-input,
+            .input-number,
+            #category,
+            .input-txt {
+                font-size: pxrem(20px);
+                background-color: inherit;
+                width: 100%;
+                border: none;
+                outline: none;
+
+
+            }
+
+            input[value=""]::after {
+                content: '€';
+            }
+
+            input {
+                &::placeholder {
+                    text-transform: uppercase;
+                }
+
+
+            }
+
+        }
+
+        .inputs {
+            .btn-input {
+                display: block;
+                width: 50%;
+                outline: none;
+                border: 1px solid #ccc;
+                background: inherit;
+                padding: 5px;
+                margin: 0 auto;
+                transition: .5s;
+
+                @media screen and (max-width:700px) {
+                    width: 100%;
+
+                }
+
+                &:hover {
+                    background-color: rgb(207, 206, 206);
+                }
+            }
+        }
+    }
+
+    .your-merk {
+        margin-top: pxrem(50px);
+        border-top: 1px solid black;
+        width: 100%;
+        height: 100%;
+
+
+        .bd-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            max-width: 1200px;
+            margin-left: 2.5rem;
+            margin-right: 2.5rem;
+            align-items: center;
+            gap: 2rem;
+            margin: 0 auto;
+
+            .card {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                padding: 1.5rem;
+                border-radius: 1rem;
+                overflow: hidden;
+                -webkit-box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.75);
+                -moz-box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.75);
+                box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.75);
+                margin: pxrem(16px);
+
+
+                .card-img {
+                    overflow: hidden;
+                    width: pxrem(180px);
+                    height: pxrem(180px);
+                    margin: 0 auto;
+                    padding: 3rem;
+                }
+
+                .card-name {
+                    position: absolute;
+                    top: 10;
+                    height: 100%;
+
+                }
+
+                .card-precis {
+
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    span,
+                    i {
+                        overflow: hidden;
+                        font-size: pxrem(20px);
+                    }
+
+                    i {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

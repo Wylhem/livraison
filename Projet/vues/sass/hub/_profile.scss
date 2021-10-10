@@ -1,0 +1,98 @@
+.profil {
+    width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+    justify-content: center;
+
+    @media screen and(min-width:700px) {
+        background-color: whitesmoke;
+    }
+
+    .profil-container {
+        display: block;
+        background-color: $white;
+        //border: 0.5px solid rgba($brn, .6);
+        max-width: 90%;
+        height: max-content;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: pxrem(150px);
+        padding: pxrem(20px);
+
+        .title-section {
+            margin-bottom: pxrem(30px);
+
+            .subtitle {
+                margin-top: pxrem(20px);
+                text-transform: uppercase;
+                font-size: pxrem(18px);
+                font-weight: bold;
+                margin-bottom: pxrem(20px);
+            }
+
+            .input-section {
+                margin-top: pxrem(14px);
+
+
+                .area {
+                    border: 1px solid $brn;
+                    padding: pxrem(5px);
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: pxrem(15px);
+
+
+                    .account-lbl {
+                        font-size: pxrem(10px);
+                        text-transform: uppercase;
+                    }
+
+                    .input-txt {
+                        font-size: pxrem(20px);
+                        background-color: inherit;
+                        width: 100%;
+                        border: none;
+                        outline: none;
+
+                        //border-bottom:1px solid $brn  ;
+                    }
+
+
+
+                    input {
+                        &::placeholder {
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+
+                .buttons {
+
+                    .btn-sub {
+                        cursor: pointer;
+                        width: pxrem(290px);
+                        margin-bottom: pxrem(15px);
+                        border: none;
+                        color: white;
+                        text-align: center;
+                        padding: pxrem(15px);
+                        // border-radius: pxrem(999px);
+                    }
+
+                    .green {
+                        background-color: $green;
+                    }
+
+                    .pink {
+                        background-color: $pink;
+                    }
+                }
+
+            }
+
+
+        }
+
+
+    }
+}

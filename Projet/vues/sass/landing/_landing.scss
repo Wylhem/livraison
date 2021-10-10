@@ -1,0 +1,251 @@
+.landing {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: pxrem(100px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white;
+}
+
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: pxrem(20px) pxrem(100px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        position: relative;
+
+        img {
+            width: pxrem(100px);
+        }
+    }
+
+    ul {
+        position: relative;
+        display: flex;
+        transition: all .5 .4;
+
+        li {
+            a {
+                display: inline-block;
+                color: $brn;
+                font-weight: 400;
+                margin-left: pxrem(40px);
+                text-decoration: none;
+            }
+        }
+    }
+
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .textBox {
+        position: relative;
+        max-width: 600px;
+
+        h1 {
+            color: $brn;
+            font-size: 3rem;
+            font-weight: 700;
+
+            span {
+                color: $potato;
+                font-size: 1.2em;
+            }
+        }
+
+        h2 {
+            color: $brn;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        p {
+            margin-top: pxrem(15px);
+        }
+
+        .buttons {
+            display: inline-block;
+            margin-top: pxrem(50px);
+
+
+            button {
+                padding: pxrem(15px) pxrem(20px);
+                color: $white;
+                border-radius: pxrem(40px);
+                letter-spacing: pxrem(1px);
+                border: none;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: .7;
+                }
+
+            }
+
+
+            .inscription {
+                background-color: $green;
+            }
+
+            .connexion {
+                background-color: $brn;
+            }
+
+        }
+    }
+
+    .imgBox {
+        width: pxrem(800px);
+        display: flex;
+        justify-content: flex-end;
+        padding-right: pxrem(20px);
+        margin-top: pxrem(50px);
+    }
+
+    img {
+        min-width: pxrem(340px);
+    }
+}
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $pink;
+    clip-path: circle(pxrem(600px) at right pxrem(800px));
+}
+
+@media(max-width:1164px) {
+
+    header {
+        padding: pxrem(20px);
+        padding-bottom: 0;
+
+
+
+        ul {
+            //  display: none;
+            transition: translateY(-100vh);
+
+
+
+            &#navigation {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background-color: $pink;
+                z-index: 10;
+                transition: 0.3s;
+                transform: translateY(-100vh);
+
+                &.active {
+                    transform: translateY(0);
+
+                }
+            }
+
+            li {
+                padding-bottom: pxrem(40px);
+
+                &:hover {
+                    opacity: .6;
+                }
+
+                a {
+                    color: $white;
+                    font-size: 2em;
+                }
+            }
+        }
+
+        #toggle {
+            visibility: visible;
+            transform: rotate(180deg);
+            transition: all .3s;
+            width: pxrem(50px);
+            height: pxrem(50px);
+            cursor: pointer;
+            background: url("../../images/hamburger.png");
+            background-size: pxrem(50px);
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 11;
+
+            &.active {
+                width: pxrem(50px);
+                height: pxrem(50px);
+                visibility: visible;
+                transform: rotate(-180deg);
+                transition: all .3s;
+                background: url("../../images/close.png");
+                background-size: pxrem(50px);
+                background-position: center;
+                background-repeat: no-repeat;
+                z-index: 11;
+                overflow: none;
+            }
+
+        }
+    }
+
+    .landing {
+        padding: pxrem(20px);
+
+        .circle {
+            position: absolute;
+            clip-path: circle(pxrem(300px) at center pxrem(1000px));
+        }
+
+    }
+
+    .content {
+        flex-direction: column;
+        margin-top: pxrem(130px);
+
+        .textBox {
+            margin-top: pxrem(50px);
+            max-width: 100%;
+
+        }
+
+        .imgBox {
+            margin-top: 0;
+            margin-left: pxrem(15px);
+            max-width: 100%;
+            justify-content: center;
+
+            img {
+                max-width: pxrem(250px);
+            }
+        }
+
+
+    }
+
+    :root {
+        font-size: 70%;
+    }
+}

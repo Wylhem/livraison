@@ -1,0 +1,16 @@
+@function pxrem($size) {
+    $value: $size / 16px;
+    @return #{$value}rem;
+}
+
+@function getImage($img) {
+    @return '../../images/#{$img}';
+}
+
+
+
+@media screen and (max-width:700px) {
+    :root {
+        font-size: 80%;
+    }
+}

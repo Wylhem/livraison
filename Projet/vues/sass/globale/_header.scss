@@ -1,0 +1,119 @@
+header {
+    position: absolute;
+    position: fixed;
+    padding: pxrem(20px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $white;
+    color: $brn;
+    height: pxrem(70px);
+    overflow: hidden;
+    z-index: 100000000;
+
+
+    .left_area {
+        img {
+            width: pxrem(70px);
+        }
+    }
+
+
+
+    .bar {
+
+
+
+        #basket {
+            margin-right: pxrem(20px);
+
+        }
+
+        i {
+            font-size: pxrem(40px);
+            overflow: hidden;
+            cursor: pointer;
+
+            &:hover {
+                opacity: .6;
+            }
+        }
+
+    }
+
+}
+
+
+
+#navigation {
+    background-color: $brn;
+    position: fixed;
+    left: 0;
+    width: pxrem(250px);
+    height: 100vh;
+    color: $white;
+    transform: translateX(-250px);
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    //text-align: center;
+    z-index: 1000000000001;
+
+
+
+    ul {
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        padding-top: pxrem(60px);
+
+        li {
+            line-height: pxrem(60px);
+            padding-left: pxrem(40px);
+            transition: .3s;
+
+            .prof-img {
+                width: 50%;
+
+                img {
+                    object-fit: cover;
+                    -o-object-fit: cover;
+                    object-position: center;
+                    -o-object-position: center;
+                    width: 100%;
+                    border-radius: pxrem(999px);
+                }
+            }
+
+            a {
+
+                &:hover {
+
+                    opacity: .6;
+                }
+
+                i {
+                    overflow: hidden;
+                    font-size: pxrem(18px);
+                    padding-right: pxrem(20px);
+                }
+            }
+
+        }
+    }
+
+    #img-account {
+        overflow: hidden;
+        font-size: pxrem(100px);
+        margin-bottom: pxrem(50px);
+    }
+
+
+
+    &.active {
+        transform: translateX(0);
+    }
+
+
+}

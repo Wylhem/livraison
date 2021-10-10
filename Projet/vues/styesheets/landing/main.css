@@ -1,0 +1,192 @@
+@media screen and (max-width: 700px) {
+  :root {
+    font-size: 80%; } }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden; }
+
+body {
+  width: 100%;
+  height: 100%; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+li {
+  list-style: none; }
+
+.bold {
+  text-transform: uppercase;
+  font-weight: bold; }
+
+.blue {
+  color: #337ab7; }
+
+.landing {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 6.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffff; }
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.25rem 6.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  header .logo {
+    position: relative; }
+    header .logo img {
+      width: 6.25rem; }
+  header ul {
+    position: relative;
+    display: flex;
+    transition: all .5 .4; }
+    header ul li a {
+      display: inline-block;
+      color: #2F2E41;
+      font-weight: 400;
+      margin-left: 2.5rem;
+      text-decoration: none; }
+
+.content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .content .textBox {
+    position: relative;
+    max-width: 600px; }
+    .content .textBox h1 {
+      color: #2F2E41;
+      font-size: 3rem;
+      font-weight: 700; }
+      .content .textBox h1 span {
+        color: #996518;
+        font-size: 1.2em; }
+    .content .textBox h2 {
+      color: #2F2E41;
+      font-size: 2.5rem;
+      font-weight: 700; }
+    .content .textBox p {
+      margin-top: 0.9375rem; }
+    .content .textBox .buttons {
+      display: inline-block;
+      margin-top: 3.125rem; }
+      .content .textBox .buttons button {
+        padding: 0.9375rem 1.25rem;
+        color: #ffff;
+        border-radius: 2.5rem;
+        letter-spacing: 0.0625rem;
+        border: none;
+        cursor: pointer; }
+        .content .textBox .buttons button:hover {
+          opacity: .7; }
+      .content .textBox .buttons .inscription {
+        background-color: #28C743; }
+      .content .textBox .buttons .connexion {
+        background-color: #2F2E41; }
+  .content .imgBox {
+    width: 50rem;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1.25rem;
+    margin-top: 3.125rem; }
+  .content img {
+    min-width: 21.25rem; }
+
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FF6584;
+  clip-path: circle(37.5rem at right 50rem); }
+
+@media (max-width: 1164px) {
+  header {
+    padding: 1.25rem;
+    padding-bottom: 0; }
+    header ul {
+      transition: translateY(-100vh); }
+      header ul#navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #FF6584;
+        z-index: 10;
+        transition: 0.3s;
+        transform: translateY(-100vh); }
+        header ul#navigation.active {
+          transform: translateY(0); }
+      header ul li {
+        padding-bottom: 2.5rem; }
+        header ul li:hover {
+          opacity: .6; }
+        header ul li a {
+          color: #ffff;
+          font-size: 2em; }
+    header #toggle {
+      visibility: visible;
+      transform: rotate(180deg);
+      transition: all .3s;
+      width: 3.125rem;
+      height: 3.125rem;
+      cursor: pointer;
+      background: url("../../images/hamburger.png");
+      background-size: 3.125rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 11; }
+      header #toggle.active {
+        width: 3.125rem;
+        height: 3.125rem;
+        visibility: visible;
+        transform: rotate(-180deg);
+        transition: all .3s;
+        background: url("../../images/close.png");
+        background-size: 3.125rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 11;
+        overflow: none; }
+  .landing {
+    padding: 1.25rem; }
+    .landing .circle {
+      position: absolute;
+      clip-path: circle(18.75rem at center 62.5rem); }
+  .content {
+    flex-direction: column;
+    margin-top: 8.125rem; }
+    .content .textBox {
+      margin-top: 3.125rem;
+      max-width: 100%; }
+    .content .imgBox {
+      margin-top: 0;
+      margin-left: 0.9375rem;
+      max-width: 100%;
+      justify-content: center; }
+      .content .imgBox img {
+        max-width: 15.625rem; }
+  :root {
+    font-size: 70%; } }
